@@ -51,7 +51,6 @@ app.get("/api/dashboard", async (_req, res) => {
 
     res.json(recordObject(record));
   } catch (error) {
-    console.error("DASHBOARD QUERY ERROR:", error);
     res.status(503).json({
       message: error.message || "Unable to load dashboard data."
     });
