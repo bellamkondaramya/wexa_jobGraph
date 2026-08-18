@@ -1,0 +1,20 @@
+{
+  "name": "jobgraph-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node seed/seedDatabase.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "neo4j-driver": "^5.28.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
