@@ -10,6 +10,14 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (_req, res) => {
+  res.json({
+    message: "WEXA JobGraph API is running",
+    status: "ok",
+    database: "CognoDB"
+  });
+});
+
 async function runQuery(query, params = {}) {
   const session = driver.session();
   try {
