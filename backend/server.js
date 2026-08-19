@@ -185,7 +185,7 @@ app.get("/api/graph/:candidateId", async (req, res) => {
   }
 });
 
-const server = app.listen(PORT, async () => {
+const server = app.listen(PORT, "0.0.0.0", async () => {
   try {
     await verifyDatabase();
     console.log(`JobGraph API running on port ${PORT}`);
